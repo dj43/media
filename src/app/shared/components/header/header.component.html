@@ -1,0 +1,51 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan darken-3" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">XYZ</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li [routerLinkActive]="['active']" class="nav-item">
+        <a [routerLink]="['home']" class="nav-link waves-light" mdbWavesEffect>Home</a>
+      </li>
+      <li *ngIf="userLoggedIn" [routerLinkActive]="['active']"  class="nav-item">
+        <a [routerLink]="['gallery']" class="nav-link waves-light" mdbWavesEffect>Gallery</a>
+      </li>
+      <li [routerLinkActive]="['active']"  class="nav-item">
+        <a [routerLink]="['about-us']" class="nav-link waves-light" mdbWavesEffect>About Us</a>
+      </li>
+
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+
+      <li class="nav-item">
+        <a class="nav-link">
+          <div *ngIf="!userLoggedIn" class="btn-group" >
+            <mdb-icon (click)="show()" fas icon="sign-in-alt" mdbDropdownToggle></mdb-icon>
+          </div>
+          <div *ngIf="userLoggedIn" class="btn-group" mdbDropdown>
+            <mdb-icon  fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">{{userName}}</a>
+              <a (click)="signOut()" class="dropdown-item" >Sign Out</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<div *ngIf="showLogin">
+<app-login #testing></app-login>
+</div>

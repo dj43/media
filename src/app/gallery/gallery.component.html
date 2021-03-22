@@ -1,0 +1,8 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center" gallerize>
+        <div *ngFor="let img of imageData" class=" col-auto" >
+            <img class="my-4" width="250rem" height="250rem" [src]="img.srcUrl">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+
+.gradient{
+    background: rgb(0,16,36);
+    background: linear-gradient(90deg, rgba(0,16,36,0.9570203081232493) 0%, rgba(34,218,255,0.9374124649859944) 100%);
+    
+}
+
+.page-header{
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.icon{
+    color: #fff;
+    height: 4rem;
+    width: 4rem;
+    font-size: 10.75rem;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    border-radius: 5%;
+}
+
