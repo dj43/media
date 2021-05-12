@@ -10,7 +10,7 @@ pipeline {
  
 
     stage('Build') {
-      steps { sh 'npm  build' }
+      steps { sh 'ng  build' }
     }
   }
 }
